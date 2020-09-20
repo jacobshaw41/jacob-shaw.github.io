@@ -24,10 +24,30 @@ en-GB:
 en-AU:
   <<: *DEFAULT_EN
 
+# Yiddish
+# -----------------
+yid: &DEFAULT_YID
+  comments_label             : "לאָזן אַ באַמערקאונג"
+  comments_title             : "באַמערקאונגען"
+  comment_form_info          : "אייער בליצפּאָסט אַדרעס וועט נישט זיין ארויס. פארלאנגט פעלדער זענען אנגעצייכנט."
+  comment_form_comment_label : "באַמערקן"
+  comment_form_md_info       : "מאַרקדאַון איז געשטיצט."
+  comment_form_name_label    : "נאָמען"
+  comment_form_email_label   : "אימעיל אדרעס"
+  comment_form_website_label : "(וועבזייטל (נישט פארלאנגט"
+  comment_btn_submit         : "שיקן באַמערקאונג"
+  comment_btn_submitted      : "געשיקט"
+  comment_success_msg        : ".דאַנקען פֿאַר דיין באַמערקאונג. זי וועט זיין געוויזן אויף דעם וועבזייטל ווען זי איז באוויליקט"
+  comment_error_msg          : ".אנטשולדיגט, עס איז געווען אַ טעות מיט דיין פאָרלייגן. ביטע פּלאָמבירן אַלץ און פּרובירן ווידער"
+ydd:
+  <<: *DEFAULT_YID
+yih:
+  <<: *DEFAULT_YID
+
 # Spanish
 # -------
 es: &DEFAULT_ES
-  comments_label             : "Dejar un commentario"
+  comments_label             : "Dejar un comentario"
   comments_title             : "Comentar"
   comment_form_info          : "Su dirección de correo no será publicada. Se han resaltado los campos requeridos"
   comment_form_comment_label : "Comentario"
@@ -488,6 +508,8 @@ pa: &DEFAULT_PA
   comment_error_msg          : "ਮੁਆਫ ਕਰਨਾ, ਤੁਹਾਡੀ ਅਧੀਨਗੀ ਵਿੱਚ ਕੋਈ ਗਲਤੀ ਹੋਈ ਸੀ ਕਿਰਪਾ ਕਰਕੇ ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਸਾਰੇ ਲੋੜੀਂਦੇ ਖੇਤਰ ਪੂਰੇ ਹੋ ਗਏ ਹਨ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 pa-IN:
   <<: *DEFAULT_PA
+
+
 
 # Another locale
 # --------------
