@@ -15,7 +15,7 @@ I looked at [_The Psychology of Superorganisms: Collective Decision Making by In
 
 ### 1. Identify a statistical question that you could ask.
 
-How does the number of insects in a group effect the amount of time it takes them to solve a problem?
+How does the number of ants in a colony effect the amount of time it takes them to complete a task (expressed as a proportion to how long it takes similarly-sized colonies to get the food with no task to solve)?
 
 ### 2. Identify the population you would study to answer the question. What information about the population would help answer your question?
 
@@ -38,7 +38,7 @@ Alternative: There is an inverse correlation between the number of ants present 
 ### 6. Identify the variables and treatments that would provide information about your question. Explain your choice of treatments.**
 
 We still need to know the number of ants in every colony are. The independent variable is the number of ants in the colony. The dependent variable is the amount of time it takes for the ants to perform the same task.
-In are two groups: the control and the experimental group. The control would be given food in the normal way ants get their food—in order to get this food, the ants only need to walk to the food and carry it back to their colony. The experimental group would be given a relatively complex task that prevents them from reaching their food (like a barricade and/or flamethrower).
+In are two groups: the control and the experimental group. The control would be given food in the normal way ants get their food—in order to get this food, the ants only need to walk to the food and carry it back to their colony. The experimental group would be given a relatively simple task that prevents them from reaching their food (like a barricade and/or flamethrower).
 We need the control group to have no task because it gives us a measure of how long it "normally" takes a particular number of ants to work together to get food. This is what the experimental group is compared to. This helps to isolate the variable of their time—by comparing the experimental group's time to that of a control group, we can see, by proportion, how the number of ants helped to solve the task (as opposed to just pick up food).
 
 ### 7. Identify the treatment groups, and how each subject would be assigned to a group.**
@@ -47,7 +47,7 @@ Half of the sample group would be  selected (via another round of intervallic so
 
 ### 8. Briefly discuss how the experiment would be conducted.**
 
-Each individual colony would be timed to see how long it takes for them to perform their task (all of these tasks must be standardized). The times of the experimental group would then be plotted against the number of ants in the colony. Then, the I would do the same thing to the control group and then compare the two. If the experimental group's time decreased in proportion to the control group's time as the number of ants increased, the alternative hypothesis would be supported. If, instead, the number of ants did not seem to relate to the time it took them to solve the task as compared to the control group, the null hypothesis would be supported.
+Each individual colony would be timed to see how long it takes for them to perform their task (all of these tasks must be standardized—that is, as close as the same as possible). The times of the experimental group would then be plotted against the number of ants in the colony. Then, the I would do the same thing to the control group and then compare the two. If the experimental group's time decreased in proportion to the control group's time as the number of ants increased, the alternative hypothesis would be supported. If, instead, the number of ants did not seem to relate to the time it took them to solve the task as compared to the control group, the null hypothesis would be supported.
 
 ### 9. What biases may come up, and how would you address them?
 
