@@ -7,9 +7,11 @@ comments: true
 ---
 
 ### Findings
+
 I found that the mean of the values 100 postfix expressions is 529.91.
 
 ### Methodolgy
+
 This result was found by running code that evaluates each of the expressions with a method that relies on two stacks. In this write-up, I will call it the **first stack** and **second stack**. The method starts by putting the values of the expression (which exists in the form of a list) into the first stack. Then, one by one, it checks whether the value on the top of the first stack is a number or operator. If it is _not_ an operator, it pops the value off into the second stack. If it _is_ an operator, however, it takes the last two values from the second stack (if they exist) and does that operation on them. The last two are on top of the second stack due to the last-in first-out nature of stacks. Then, it pops every value off of the second stack and pushes it onto the first stack. The method repeats this method until the
 
 As you can see, this procedure very efficient when stacks are used.
