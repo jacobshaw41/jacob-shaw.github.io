@@ -9,7 +9,7 @@ comments: true
 
 ## Study
 
-I looked at [_The Psychology of Superorganisms: Collective Decision Making by Insect Societies_](http://www.public.asu.edu/~spratt1/Publications/Sasaki%20and%20Pratt%202018.pdf) by Takao Sasaki and Stephen C. Pratt, published in the _Annual Review of Entomology_
+I looked at [_The Psychology of Superorganisms: Collective Decision Making by Insect Societies_](http://www.public.asu.edu/~spratt1/Publications/Sasaki%20and%20Pratt%202018.pdf) by Takao Sasaki and Stephen C. Pratt, published in the _Annual Review of Entomology_.
 
 ## Proposed new study
 
