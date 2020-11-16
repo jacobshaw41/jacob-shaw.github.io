@@ -59,4 +59,4 @@ Finally, this is only done on one ant genus. To get better, more universal resul
 
 ## Muffin Recipe
 
-I came across [this muffin recipe](https://damndelicious.net/2014/03/24/coffee-cake-muffins/). Coffee muffins are new to me—as you can expect, I am obsessed.
+I came across [this muffin recipe](https://damndelicious.net/2014/03/24/coffee-cake-muffins/). Coffee cake muffins are new to me—as you can expect, I am obsessed.
