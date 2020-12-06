@@ -19,8 +19,6 @@ New York County currently has the greatest number of hospital beds per capita (p
 
 ## Methodology
 
-Overall, I encountered no systematic and very little other problems. The ideas behind all of my methods worked, but problems occasionally arose in their implemention.
-
 In order to do this, I employed a variety of methods spread across two different Python files. The first python file queried the website and used it to write a .csv file. The second python file took that .csv file, and organized and analyzed it to get the final result. My workflow could be separated into three different steps:
 
 1. Extraction
@@ -29,29 +27,35 @@ In order to do this, I employed a variety of methods spread across two different
 
 3. Analysis
 
-In this blog post, I will walk through each of these three steps sequentially. Within these three steps, I had several methods that performed simple procedures to obtain, clean, sort, and format data, among other things. I will touch on several crucial methods specifically that helped me come upon the above finding.
+In this blog post, I will walk through each of these three steps sequentially. Within these three steps, I had several methods that performed simple procedures to obtain, clean, sort, and format data, among other things. I will discuss several crucial methods that helped me come upon the above finding.
+
+Overall, I encountered no systematic and very little other problems. The ideas behind all of my methods worked, but problems occasionally arose in their implemention.
 
 ### 1. Extraction
 
-In order to extract data, I first manually visited the website so that I could figure out the format of the data. I found that it was text with values separated by commas. I then queried the website, increasing the value of q until it returned an out-of-bounds error. This ensures that I will catch everything, even if more things are entered onto the website.
+In order to extract data, I first manually visited the website so that I could figure out the format of the data, consulting with the online API [documentation](https://docs.google.com/document/d/1L5vHr3zaOF_yLvHVu9--_a0HdmXpjsR-81Jwrsuwafw). I found that it was text with values separated by commas. The code queries the website for different q-values, increasing the value of q until it returned an out-of-bounds error. This ensures that it will catch everything, even if more data points are entered into the website after the code was written.
 
-I took the string I found on the website for each q value and parsed it into a list of values, separated by commas. I then had the code write that line into a .csv file. This was repeated for every such string.
+The code queries the website and takes the string it retrieves from the website for each q-value and parses it into a list of values, separated by commas. The code then converts the list into a line of a .csv file. This was repeated for every such string, adding line by line to create one master .csv data file.
 
-In this step, I improved my methodology by automating the creation of the .csv file. This saved on time and, by extension, allows me to refresh the data by running the file again. This ultimately allowed the data (and analysis thereof) to be up-to-date.
+In this step, I improved my methodology by automating the creation of the .csv file. This saved on time and, by extension, allows people to refresh the data just by running the first file again. This ultimately allows the data (and analysis thereof) to be up-to-date.
 
 ### Organization
 
-I first parsed .csv file and transfered it into dictionaries.  I then cleaned the data. In cleaning it, I divided the population  by the HAB unit, and then multiplied that by HAB value for each line in the data in order to get the total number of beds in the county. I then manually checked to make sure that all of these numbers looked like they were integers (that is, with a trail of 9s or 0s after the decimal point) since the number of hospital beds is a descrete value. Any values that _did not_ look like integers—considering the HAB values (except for the 0-values; see below) had 6 decimal points, enough to reliably indicate whether they represented descrete or nondescrete values—would be reason to suspect that the data was inaccurate in some way, wherein I would remove that county from consideration. However, all values seemed to represent integers, thereby passing the test. I also checked for outlying (that is, extraordinarily large—see below—values) values, but could not find any.
+In the second Python file, the code starts by parsing the .csv file and transfering it into a list dictionaries. It then cleans the data.
 
-While it would not matter to the final result, I did not remove the 0 values in the data nor did I remove counties that were seemingly "missing" categories. For the first case, I assumed that they really *did not* have any ICU beds, for instance, as is the case in many counties around the country. In that case, removing the category would  For the second case, I assumed that while the total bed county was likely accurate, different counties reported their bed counts in different ways—some might report an ICU bed as "other," some counties that do not have psychiatric beds might just not list them (instead of putting "0").
+The code first standardizes the units. It divides the population by the HAB unit, and then multiplies the result by HAB value for each line in the data. This finds the total number of beds in the county. I then manually checked to make sure that all of these numbers looked like they were integers (that is, with a trail of 9s or 0s after the decimal point) since every count of hospital beds should be a descrete value. Hypothetically, if any values that _did not_ look like integers—considering the HAB values (except for the 0-values; see below) had 6 decimal points, persumably enough to reliably indicate whether they represented descrete or nondescrete values—there would be reason to suspect that the data was inaccurate in some way. In that case, I would remove that county from consideration. However, all values seemed to represent integers, thereby passing the test.
 
-Hamilton, Tioga, and Washington Counties only have ICU bed figures, of which they all have 0. It is not clear whether or not this is an indication that there are not _any_ beds; regardless, this would not factor into the final results as they are all at the low end rather than the high end.
+I also checked for outlying (that is, extraordinarily large—see below—values) values, but could not find any.
+
+While it would not affect the final result, I did not remove the 0 values in the data nor did I remove counties that were seemingly "missing" types of beds. For the first case, I assumed that they really *did not* have any ICU beds, for instance, as is the case in many counties around the country. For the second case, I assumed that while the total bed county was likely accurate, different counties reported their bed counts in different ways—some might report an ICU bed as "other," some counties that do not have psychiatric beds might just not list them (instead of putting "0"). Again, only removing these values would not affect the total bed count.
+
+Finally, Hamilton, Tioga, and Washington Counties only have ICU bed figures, of which they all have 0. It is not clear whether or not this is an indication that there are _no_ beds at all; regardless, this would not factor into the final results as they are all at the low-end rather than the high-end of values.
 
 ### Analysis
 
-Finally, I took these dictionaries that I generated by manipulating the values taken from the .cvs file, for each county adding together the number of beds (of all types) to get total bed count. I divided these total bed counts by the population of each county order to get the number of bed per capita in every county. I then sorted the dictionaries, utilizing the `lambda` funcion.
+Finally, the code takes the dictionaries that had been generated by manipulating values taken from the .csv file, and for each county adds together the number of beds (of all types) to get a total bed count per county. It then divides each county's total bed count by the county population in order to get the number of bed per capita in every county. It then then sorts the dictionary containing every county and its number of beds by the latter values, utilizing the `lambda` funcion.
 
-In formatting the output, I used the `%` operand as well as the `os.path` module and `time` modules, the latter two which I used to get the time that the .csv file was last updated from the website. I did this because, in light of the rapidly evolving condition of the pandemic, knowing when the data was accessed is crucial in analyzing the number hospital beds in every county; as time passes and the situation changes, new beds might be built and others might break, possibly affecting the final result.
+In formatting the output, the code uses the `%` operand as well as the `os.path` module and `time` modules, the latter two of which it uses to get the time that the .csv file was last updated from the website. It does this this because, in light of the rapidly evolving condition of the pandemic, knowing when the data was accessed is crucial in analyzing the number hospital beds in every county; as time passes and the situation changes, new beds might be built and others might break, possibly affecting the final result.
 
 ## Conclusion
 
