@@ -32,4 +32,4 @@ This challenged an idea that nutritionists had held for a while. This may be see
 
 As per usual, [the muffin recipe](https://lovelylittlekitchen.com/best-ever-pumpkin-muffins/). Halloween time is here. Tell me, honestly: what is better than a pumpkin muffin?
 
-_Tsufridn bakn!_
+_Tsufridenem bakn!_
