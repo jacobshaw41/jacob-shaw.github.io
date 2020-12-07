@@ -2,7 +2,7 @@
 layout: post
 title: Meta Analysis of Research
 subtitle: 2.1
-tags: [homework]
+tags: [lab, data]
 comments: true
 ---
 

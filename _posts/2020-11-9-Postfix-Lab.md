@@ -2,7 +2,7 @@
 layout: post
 title: Postfix Lab
 subtitle: 2.3
-tags: [lab]
+tags: [lab, analysis, stack]
 comments: true
 ---
 
