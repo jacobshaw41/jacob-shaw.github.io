@@ -18,7 +18,7 @@ I chose to study four majors, all having a rather large sample size in compariso
 
 I produced the following violin plot:
 
-https://jacobshaw41.github.io/jacob-shaw.github.io/assets/img/Figure_1.png
+[https://jacobshaw41.github.io/jacob-shaw.github.io/assets/img/Figure_1.png]
 
 It shows that, for all majors, people who took a coding boot camp expect to make nontrivially more than people who did not. For instance, the mean expected earning for English majors who did not attend a boot camp was 55832.36, whereas that of English majors who did attend a bootcamp was $67125.00. It also seems that the data was more spread out among English majors who did attend boot camp (σ: 31220.128 than those who did not (σ = 17085.32).
 
