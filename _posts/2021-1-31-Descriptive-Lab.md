@@ -18,9 +18,9 @@ I chose to study four majors, all having a rather large sample size in compariso
 
 I produced the following violin plot:
 
-[https://jacobshaw41.github.io/jacob-shaw.github.io/assets/img/Figure_1.png]
+![Violin plot comparing expected earning for majors in computer science, economics, English, and psychology who both did and did not attend a coding boot camp](https://jacobshaw41.github.io/jacob-shaw.github.io/assets/img/Figure_1.png)
 
-It shows that, for all majors, people who took a coding boot camp expect to make nontrivially more than people who did not. For instance, the mean expected earning for English majors who did not attend a boot camp was 55832.36, whereas that of English majors who did attend a bootcamp was $67125.00. It also seems that the data was more spread out among English majors who did attend boot camp (σ: 31220.128 than those who did not (σ = 17085.32).
+It shows that, for all majors, people who took a coding boot camp expect to make nontrivially more than people who did not. For instance, the mean expected earning for English majors who did not attend a boot camp was 55832.36, whereas that of English majors who did attend a boot camp was $67125.00. It also seems that the data was more spread out among English majors who did attend boot camp (σ: 31220.128 than those who did not (σ = 17085.32).
 
 One should also note the massive spread in computer science expected salaries (min = $6000, max = $800000, σ = 60132.40). This is because there is a small group of people in the larger dataset who expect to make the most (falling into the 99th percentile). This can be seen in the violin plot. These outliers are not necessarily inaccurate, especially in a field like computer science, wherein the range of salaries between jobs—for instance, hobby coders working for small start-ups and senior executives at companies like Apple and Google—is immense.
 
